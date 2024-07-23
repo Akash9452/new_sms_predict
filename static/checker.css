@@ -27,15 +27,15 @@
     scale:1.2;
 }
 .result{
-    border:3px solid white;
+   /* border:3px solid white; */
     margin-left: 30%;
     padding: 5px;
-    background: rgb(79, 74, 74);
+   /* background: rgb(79, 74, 74);*/
     width: 40%;
-    height: 30px; /* Adjust height as needed */
+    height: 50px; /* Adjust height as needed */
     font-size: 26px; /* Adjust font size as needed */
     color: white;
     font-family: sans;
     border-radius: 12px;
-    box-shadow: 5px 5px 5px #605050;
+   /* box-shadow: 5px 5px 5px #605050;*/
 }
