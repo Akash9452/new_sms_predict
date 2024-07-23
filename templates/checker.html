@@ -1,0 +1,42 @@
+
+{% extends "layout.html" %}
+
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='checker.css') }}">
+  <p>  this is also {{ title }} page ! </p>
+
+
+
+
+<form action="" method="post">
+
+    {{ form.hidden_tag() }}
+    <div>
+        
+        {{ form.sms_check(class="custom-textarea") }}
+        {% if form.sms_check.errors %}
+            {% for error in form.sms_check.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+        
+    </div>
+    <br>
+    
+    <div>{{form.submit(class="predict-button")}}</div>
+    <br>
+    <div class="result">
+       {% if output == "The SMS is 0" %}
+           The message is  ham
+       {% elif output == "The SMS is 1" %}
+            The message is spam
+       {% endif %}.
+      </div>
+    <br>
+    <div>
+       
+        <p>Redirect to  Homepage ? <a href=" {{ url_for('home')}} ">Home</a></p>
+    </div>
+</form>
+{% endblock content %}
