@@ -50,7 +50,11 @@ def spam():
 def about():
     return render_template("about.html" , title = "about" )
 
-
+@app.route("/predict")
+def predict():
+    
+        
+    return redirect(url_for("check") )
 
 if __name__ == "__main__":
     app.run(debug=True)
